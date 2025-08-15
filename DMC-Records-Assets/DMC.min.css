@@ -3423,7 +3423,8 @@ blockquote {
 	padding-top: 4em;
 	padding-bottom: 1em;
 	font-weight: 400;
-	overflow: hidden
+	overflow: hidden;
+	background-color: #000;
 }
 
 .section.videos {
@@ -3528,13 +3529,13 @@ blockquote {
 }
 
 .nav-link.button {
-	background-color: var(--black);
-	border-radius: 4px;
+	background-color: #8a8a8a;
+  	border-radius: 4px;
 	margin-top: 32px;
 	margin-left: 0;
 	margin-right: auto;
 	padding: 8px 16px;
-	display: inline-block
+	display: inline-block;
 }
 
 .nav-link.button.inverted {
@@ -4027,7 +4028,7 @@ blockquote {
 }
 
 .background-heading.light-heading {
-	color: #ffffff59;
+	color: #dddddd59;
 	bottom: 56px
 }
 
@@ -4554,9 +4555,12 @@ blockquote {
 	}
 
 	.section.music {
-		padding-top: 8em;
-		padding-bottom: 2em;
-		position: relative
+  		padding-top: 4em;
+  		padding-bottom: 1em;
+  		font-weight: 400;
+  		overflow: hidden;
+		background-color: #636363;
+  	
 	}
 
 	.section.shows {
@@ -4949,6 +4953,7 @@ blockquote {
 	.section.music {
 		padding-top: 6em;
 		padding-bottom: 2em
+		
 	}
 
 	.section.shows {
