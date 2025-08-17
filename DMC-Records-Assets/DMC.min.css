@@ -5331,3 +5331,50 @@ blockquote {
     .slide { height: 38vh; }
     .play-btn { font-size: 1.8rem; }
   }
+
+  .video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none; /* hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.video-overlay iframe {
+  width: 80%;
+  height: 80%;
+  border-radius: 8px;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  color: black;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: 0.2s ease;
+}
+
+.close-btn:hover {
+  background: red;
+  color: white;
+  transform: scale(1.1);
+}
