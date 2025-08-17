@@ -3632,7 +3632,7 @@ blockquote {
 	font-family: Roboto, sans-serif;
 	font-size: 12px;
 	line-height: 32px;
-	display: flex
+	display: contents;
 }
 
 .subheading.new {
