@@ -569,20 +569,79 @@
       </div>
       <div id="subscribe" class="section footer">
          <div class="inner-container">
-            <div class="column center">
-               <h3 class="signup-title">Stay Updated</h3>
-               <h5 class="subheading center">the latest Updates Straight to your inbox</h5>
-               <div class="signup-form w-form">
-                  <form id="email-form" name="email-form" data-name="Email Form" method="get" class="form" data-wf-page-id="5e25f51710cdbb10a19fbb21" data-wf-element-id="462e7a15-31f1-9a50-478b-a7d0814c86d0" aria-label="Email Form"><input class="form-field w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="Enter your email address" type="email" id="email-2" required=""><input type="submit" data-wait="Please wait..." class="nav-link button inverted w-button" value="subscribe"></form>
-                  <div class="form-submission-message w-form-done" tabindex="-1" role="region" aria-label="Email Form success">
-                     <div class="submission-message">Thank you! Your submission has been received!</div>
-                  </div>
-                  <div class="form-submission-message w-form-fail" tabindex="-1" role="region" aria-label="Email Form failure">
-                     <div class="submission-message">Oops! Something went wrong while submitting the form.</div>
-                  </div>
-               </div>
-            </div>
-         </div         <div class="inner-container">
+           <div class="column center">
+  <h3 class="signup-title">Stay Updated</h3>
+  <h5 class="subheading center">The latest updates straight to your inbox</h5>
+  <div class="signup-form w-form">
+    <form 
+      id="email-form" 
+      action="https://formspree.io/f/your-form-id" 
+      method="POST" 
+      class="form">
+
+      <input 
+        class="form-field w-input" 
+        maxlength="256" 
+        name="email" 
+        placeholder="Enter your email address" 
+        type="email" 
+        required>
+
+      <input 
+        type="submit" 
+        value="Subscribe" 
+        class="nav-link button inverted w-button">
+    </form>
+
+    <!-- Success message -->
+    <div class="form-submission-message w-form-done" style="display:none;">
+      <div class="submission-message">Thank you! Your submission has been received!</div>
+    </div>
+
+    <!-- Error message -->
+    <div class="form-submission-message w-form-fail" style="display:none;">
+      <div class="submission-message">Oops! Something went wrong while submitting the form.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("email-form");
+  const successMessage = document.querySelector(".w-form-done");
+  const errorMessage = document.querySelector(".w-form-fail");
+
+  form.addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    // hide messages
+    successMessage.style.display = "none";
+    errorMessage.style.display = "none";
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (response.ok) {
+        form.reset();
+        successMessage.style.display = "block";
+      } else {
+        errorMessage.style.display = "block";
+      }
+    } catch (error) {
+      errorMessage.style.display = "block";
+    }
+  });
+});
+</script>
+
+         </div>         
+         <div class="inner-container">
             <div class="column center">
                <div class="footer-menu">
                   <div class="footer-nav">
