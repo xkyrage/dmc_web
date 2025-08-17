@@ -4155,7 +4155,7 @@ blockquote {
 }
 
 .shows-parallax-background {
-	background-image: linear-gradient(#00000040, #00000040), url(https://cdn.prod.website-files.com/5d977e03b3e1729167d79d72/5e247727cc9ad77c50479e2f_austin-neill-hgO1wFPXl3I-unsplash%20\(2\).jpg);
+	background-image: linear-gradient(#00000040, #00000040), url(background-shows.jpg);
 	background-position: 0 0, 50%;
 	background-size: auto, cover;
 	height: 125%;
