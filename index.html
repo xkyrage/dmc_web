@@ -256,12 +256,12 @@
     <div class="slides" id="slides">
       <!-- Slide 1 -->
       <div class="slide">
-        <img src="DMC-Records-Assets/background-videos1.jpg" alt="Diablo Video">
-        <div class="play-btn" data-video="https://www.youtube.com/embed/aFJv96HJnzM">▶</div>
+         <img src="DMC-Records-Assets/background-videos1.jpg" alt="Diablo Video">
+       <div class="play-btn" data-video="https://www.youtube.com/embed/aFJv96HJnzM">▶</div>
       </div>
       <!-- Slide 2 -->
       <div class="slide">
-        <img src="DMC-Records-Assets/background-videos2.jpg" alt="Real Video">
+         <img src="DMC-Records-Assets/background-videos2.jpg" alt="Diablo Video">
         <div class="play-btn" data-video="https://www.youtube.com/embed/aFJv96HJnzM">▶</div>
       </div>
     </div>
@@ -290,6 +290,16 @@
 
     function nextSlide() { showSlide(currentSlide + 1); }
     function prevSlide() { showSlide(currentSlide - 1); }
+
+    document.querySelectorAll('.slide').forEach(slide => {
+  const btn = slide.querySelector('.play-btn');
+  const url = btn.dataset.video;
+  const id = url.split('/').pop(); // get the last part after embed/
+  const img = document.createElement('img');
+  img.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+  img.alt = "Video Thumbnail";
+  slide.insertBefore(img, btn);
+});
 
     // Lightbox
     const lightbox = document.getElementById('lightbox');

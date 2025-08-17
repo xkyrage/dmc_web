@@ -5252,122 +5252,82 @@ blockquote {
 	}
 }
 
-  /* Slider container */
-    .slider {
-      position: relative;
-      width: 100%;
-      max-width: 100%;
-      overflow: hidden;
-    }
+  /* --- Base --- */
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background:#000; color:#fff; overflow-x:hidden; }
 
-    .slides {
-      display: flex;
-      transition: transform 0.6s ease-in-out;
-      width: 200%; /* adjust based on number of slides */
-    }
+  /* --- Full-bleed wrapper: ignores any .container max-width --- */
+  .slider {
+    position: relative;
+    width: 100vw;                         /* take whole viewport width */
+    margin-left: calc(50% - 50vw);        /* break out of centered parents */
+    margin-right: calc(50% - 50vw);
+    overflow: hidden;
+  }
 
-    .slide {
-      min-width: 100%;
-      box-sizing: border-box;
-      position: relative;
-    }
+  /* --- Track & slides --- */
+  .slides {
+    display: flex;
+    will-change: transform;
+    transition: transform .6s ease-in-out;
+  }
+  .slide {
+    flex: 0 0 100vw;                      /* each slide exactly 1 viewport wide */
+    height: 60vh;                         /* adjust as you like */
+    position: relative;
+  }
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                    /* always fill without distortion */
+    display: block;
+	max-width: 100%;
+  }
 
-    .slide img {
-      width: 100%;
-      height: 60vh;
-      object-fit: cover;
-      display: block;
-    }
+  /* --- Play button --- */
+  .play-btn {
+    position: absolute; inset: 0;
+    display: grid; place-items: center;   /* center the icon */
+    cursor: pointer;
+    background: rgba(0,0,0,.18);          /* subtle overlay to ensure click */
+    z-index: 2;
+    font: 700 3rem/1 system-ui, Arial;
+    user-select: none;
+  }
 
-    /* Play icon */
-    .play-btn {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 3rem;
-      background: rgba(0,0,0,0.6);
-      padding: 1rem 1.3rem;
-      border-radius: 50%;
-      cursor: pointer;
-      color: white;
-    }
+  /* --- Arrows --- */
+  .arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    z-index: 3; cursor: pointer; user-select: none;
+    background: rgba(0,0,0,.45);
+    padding: .4rem .7rem; border-radius: .6rem; font-size: 1.6rem;
+  }
+  .arrow.left  { left: 10px; }
+  .arrow.right { right: 10px; }
 
-    /* Arrows */
-    .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 2rem;
-      color: white;
-      background: rgba(0,0,0,0.5);
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-      user-select: none;
-      border-radius: 8px;
-    }
-    .arrow.left { left: 10px; }
-    .arrow.right { right: 10px; }
-
-    /* Lightbox */
-    .lightbox {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-      padding: 20px;
-    }
+  /* --- Lightbox --- */
+  .lightbox {
+    position: fixed; inset: 0; display: none;
+    align-items: center; justify-content: center;
+    background: rgba(0,0,0,.9); z-index: 9999; padding: 20px;
+  }
   .lightbox iframe {
-  width: 90%;
-  max-width: 900px;
-  height: 50vh;  /* scales with screen height */
-}
+    width: min(90vw, 1000px);
+    height: min(56.25vw, 70vh);           /* responsive 16:9 cap */
+    border: 0;
+  }
+  .lightbox .close {
+    position: absolute; top: 16px; right: 20px;
+    font-size: 2rem; cursor: pointer;
+  }
 
-    .close-btn {
-      position: absolute;
-      top: 20px; right: 30px;
-      font-size: 2rem;
-      cursor: pointer;
-      color: white;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .slide img {
-        height: 40vh;
-      }
-      .play-btn {
-        font-size: 2rem;
-        padding: 0.6rem 1rem;
-      }
-      .arrow {
-        font-size: 1.5rem;
-        padding: 0.4rem 0.8rem;
-      }
-      .lightbox iframe {
-        width: 95%;
-        height: 50vh;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .slide img {
-        height: 30vh;
-      }
-      .play-btn {
-        font-size: 1.5rem;
-        padding: 0.4rem 0.8rem;
-      }
-      .arrow {
-        font-size: 1.2rem;
-        padding: 0.3rem 0.6rem;
-      }
-      .lightbox iframe {
-        width: 100%;
-        height: 40vh;
-      }
-    }
+  /* --- Responsive tweaks --- */
+  @media (max-width: 768px){
+    .slide { height: 45vh; }
+    .play-btn { font-size: 2.2rem; }
+  }
+  @media (max-width: 480px){
+    .slide { height: 38vh; }
+    .play-btn { font-size: 1.8rem; }
+  }
