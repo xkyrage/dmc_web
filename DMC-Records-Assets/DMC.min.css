@@ -4638,7 +4638,7 @@ blockquote {
 	  justify-content: space-between;
 	  align-items: center;
 	  max-width: 480px;
-	  padding-left: 73px;
+	  padding-left: 444px;
 	  padding-right: 8px;
 	  display: flex;
 	}
@@ -5522,7 +5522,7 @@ blockquote {
   }
 
   .talent-image img {
-    height: 260px;
+   height: 454px;
   }
 }
 
