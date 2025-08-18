@@ -3407,7 +3407,7 @@ blockquote {
 	height: auto;
 	min-height: 100vh;
 	padding-top: 0;
-	padding-bottom: 6em;
+	padding-bottom: 0em;
 	display: flex;
 	position: relative;
 	overflow: hidden
@@ -3704,7 +3704,7 @@ blockquote {
 	max-width: 480px;
 	padding-left: 77px;
 	padding-right: 8px;
-	display: flex
+	display: contents
 }
 
 .out-now-line {
@@ -3865,7 +3865,6 @@ blockquote {
 
 .purchase-links.hero-links {
   color: #fff;
-  margin-left: 104px;
 }
 
 .product-item {
@@ -4640,7 +4639,7 @@ blockquote {
 	  max-width: 480px;
 	  padding-left: 444px;
 	  padding-right: 8px;
-	  display: flex;
+	  display: contents;
 	}
 
 	.releases {

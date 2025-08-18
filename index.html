@@ -109,21 +109,37 @@
          <div class="featured-release-hero w-dyn-list">
             <div role="list" class="w-dyn-items">
                <div role="listitem" class="featured-release w-dyn-item">
-                  <div style="background-image: url(&quot;DMC-Records-Assets/maibackground.jpg&quot;); will-change: transform; transform: translate3d(0px, -9.4626vh, 0px) scale3d(1.06308, 1.06308, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="hero-parallax-background">
-                     <div class="parallax-overlay"></div>
-                  </div>
-                  <div class="inner-container">
-                     <div class="column">
-                        <div class="out-now-container">
-                           <h5 class="subheading new">Diary</h5>
-                           <h5 class="subheading">Music</h5>
-                           <h5 class="subheading">Culture</h5>
-                          <div class="out-now-line"></div>
-                        </div>
-                        <h1 class="white"><img src="DMC-Records-Assets/DMCT.png" alt="DMC Logo" class="mainlogo"></h1>
-                        <div class="purchase-links hero-links"><a href="#" target="_blank" class="purchase-link stream hero-link">Stream</a><a href="#" target="_blank" class="purchase-link download hero-link">Watch</a><a href="#" target="_blank" class="purchase-link buy hero-link">Buy</a></div>
-                     </div>
-                  </div>
+          <div class="hero-parallax-background" style="position: relative; overflow: hidden; background: url('DMC-Records-Assets/maibackground.jpg') center/cover no-repeat;">
+  
+  <!-- Background video -->
+          <video autoplay muted loop playsinline style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0;">
+           <source src="DMC-Records-Assets/loop-right-res.mp4" type="video/mp4">
+               Your browser does not support the video tag.
+            </video>
+
+  <!-- Dark/gradient overlay (optional) -->
+              <div class="parallax-overlay" style="position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:1;"></div>
+
+  <!-- Content overlay -->
+            <div class="column" style="position: relative; z-index:2; text-align:center; color:white;margin-top: 30pc;">
+              <div class="out-now-container">
+                 <h5 class="subheading new">Diary</h5>
+              <h5 class="subheading">Music</h5>
+              <h5 class="subheading">Culture</h5>
+               <div class="out-now-line"></div>
+              </div>
+           <h1 class="white">
+         <img src="DMC-Records-Assets/DMCT.png" alt="DMC Logo" class="mainlogo">
+          </h1>
+           <div class="purchase-links hero-links">
+         <a href="#" target="_blank" class="purchase-link stream hero-link">Stream</a>
+         <a href="#" target="_blank" class="purchase-link download hero-link">Watch</a>
+         <a href="#" target="_blank" class="purchase-link buy hero-link">Buy</a>
+      </div>
+   </div>
+
+</div>
+
                </div>
             </div>
          </div>
