@@ -3435,7 +3435,9 @@ blockquote {
 .section.events {
 	padding-top: 7em;
 	padding-bottom: 2em;
+	margin-top: -57px;
 	overflow: hidden
+	
 }
 
 .section.footer {
@@ -4020,7 +4022,7 @@ blockquote {
 
 .background-heading {
 	z-index: 0;
-	color: #3333331a;
+	color: #bebebe23;
 	text-align: center;
 	letter-spacing: 0;
 	margin-top: 0;
@@ -4031,8 +4033,8 @@ blockquote {
 }
 
 .background-heading.light-heading {
-	color: #dddddd59;
-	bottom: 56px
+	color: #dddddd0a;
+	bottom: 186px;
 }
 
 .background-heading.internal-heading {
@@ -4735,7 +4737,9 @@ blockquote {
 	}
 
 	.background-heading.light-heading {
-		color: #fff3
+		bottom: 186px;
+		color: #dddddd0a;
+		
 	}
 
 	.background-heading.internal-heading {
@@ -5402,7 +5406,8 @@ blockquote {
 /* Talents */
 .section.talents {
   padding-top: 7em;
-  background-image: url(newback.png); /* Replace with your image path */
+  padding-bottom: 7em;
+  background-image: url(newback.png);/*  Replace with your image path */
   background-size: cover; /* Make it cover the whole section */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent tiling */
@@ -5557,7 +5562,7 @@ blockquote {
 .section-title {
   font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
   color: #f9f9f9;
   letter-spacing: 2px;
 }
@@ -5673,3 +5678,110 @@ blockquote {
   background: #b00610;
 }
 
+/* About Section */
+.section.about {
+  position: relative;
+  padding: 128px 44px;
+  background: #111;
+  color: #fff;
+  overflow: hidden;
+  margin-top: -57px;
+}
+
+.section.about .inner-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section.about .section-title {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+
+.section.about .section-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #ddd;
+}
+
+/* Highlights */
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.highlight-item {
+  background: rgba(255, 255, 255, 0.685); /* solid white */
+  color: #222; /* adjust text for contrast */
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+
+
+.highlight-item:hover {
+  background: #fff;
+  transform: translateY(-5px);
+}
+
+.highlight-item h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.highlight-item p {
+  font-size: 1rem;
+  color: #000000;
+}
+
+/* Background heading */
+.section.about .section-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: center;
+  margin: 0 auto 50px auto; /* center horizontally */
+  color: #ddd;
+  max-width: 800px; /* prevents it from stretching too wide */
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-highlights {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .background-heading.light-heading {
+    color: rgba(255, 255, 255, 0);
+    padding-top: 9pc;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .section.about .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section.about .section-description {
+    font-size: 1rem;
+  }
+
+  .section.about .background-heading {
+    font-size: 3rem;
+  }
+}
