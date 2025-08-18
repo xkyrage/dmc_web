@@ -17,3 +17,5 @@ b. Talents
 7. add URL to Tgibro youtube on watch cta by first section
 8. add URL to Bandcamp TgIbro
 9. Change thumbnail for video 2
+10. event section make hover zoomin
+11. add about section into navbar
