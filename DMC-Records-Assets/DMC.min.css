@@ -5785,3 +5785,69 @@ blockquote {
     font-size: 3rem;
   }
 }
+
+ .events-section {
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      background: url('https://www.transparenttextures.com/patterns/dark-fish-skin.png');
+    }
+
+    .section-title {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .show-item {
+      background: #fff;
+      color: #000;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      text-align: left;
+      transition: all 0.3s ease;
+    }
+
+    /* Hover Lift Effect */
+    .show-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+    }
+
+    .show-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin: 0 0 10px;
+    }
+
+    .show-meta {
+      font-size: 0.9em;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .rsvp {
+      display: inline-block;
+      padding: 8px 14px;
+      background: #666;
+      color: #fff;
+      font-size: 0.8em;
+      font-weight: bold;
+      border-radius: 4px;
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition: background 0.3s ease;
+    }
+
+    .rsvp:hover {
+      background: #333;
+    }
