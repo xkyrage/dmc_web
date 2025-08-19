@@ -4772,6 +4772,13 @@ blockquote {
   margin-bottom: 1.5em;
 }
 
+.subheading-footer {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: #968c8c;
+  margin-bottom: 3rem;
+}
+
 /* Form layout */
 .form-group {
   display: flex;
