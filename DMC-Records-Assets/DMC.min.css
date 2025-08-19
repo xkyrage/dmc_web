@@ -4766,9 +4766,9 @@ blockquote {
 }
 
 .subheading {
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-  color: #aaa;
+  font-size: 2rem;
+  letter-spacing: 9px;
+  color: #ffffff;
   margin-bottom: 1.5em;
 }
 
