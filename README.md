@@ -5,17 +5,13 @@ DMC Web Showcase Project
 
 ### Next:
 1. Adding URL to spotify for talents
-2. Fixing background sub heading fo section 
-```
-a. Music Releases
-b. Talents
-```
-3. Switch position of talents and events within footer navigation section
-4. Remove facebook and twitter from footer navigation section
+2. ~Fixing background sub heading for music and talents section~
+3. ~Switch position of talents and events within footer navigation section~
+4. ~Remove facebook and twitter from footer navigation section~
 5. Work on the formspree 
 6. Add producer tag on tg ibro
-7. add URL to Tgibro youtube on watch cta by first section
-8. add URL to Bandcamp TgIbro
-9. Change thumbnail for video 2
-10. event section make hover zoomin
-11. add about section into navbar
+7. ~add URL to Tgibro youtube on watch cta by first section~
+8. ~add URL to Bandcamp DMC~
+9. ~Change thumbnail for video 2~
+10. ~event section make hover zoomin~
+11. ~add about section into navbar~
