@@ -506,9 +506,9 @@ a:hover {
 
 .talent-image img {
   width: 100%;
-  height: clamp(220px, 46vw, 380px);
+  height: 42pc;
   object-fit: cover;
-  filter: grayscale(1)
+  max-width: 100%;
 }
 
 .talent-info {
