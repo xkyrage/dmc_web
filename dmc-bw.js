@@ -1,4 +1,4 @@
-<script>
+
 /* ========== DMC Records — JS Enhancements ========== */
 (function(){
   const qs = (s, el=document)=>el.querySelector(s);
@@ -142,4 +142,6 @@
   if(prefersReduced && timer){ clearInterval(timer); timer=null; }
 
 })();
-</script>
+
+ 
+

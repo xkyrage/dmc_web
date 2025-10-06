@@ -9,6 +9,12 @@
     }
   </style>
   <title>DMC Records</title>
+  <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
   <link href="./DMC-Records-Assets/DMC.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/" rel="preconnect">
   <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="anonymous">
@@ -27,6 +33,40 @@
       -o-font-smoothing: antialiased;
     }
   </style>
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const swiper = new Swiper(".talent-carousel", {
+    loop: true,
+    spaceBetween: 30,
+    slidesPerView: 1, // mobile default
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+      // 1280: {
+      //   slidesPerView: 4, // ✅ show 4 cards on large screens
+      // },
+    },
+  });
+});
+</script>
+
+
+
 </head>
 
 <body class="body">
@@ -116,28 +156,29 @@
 
   </div>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const nav = document.querySelector(".mobile-nav");
-      const links = document.querySelectorAll(".mobile-nav-link");
-      const closeBtn = document.querySelector(".mobile-nav .nav-link[href='#close']");
+  document.addEventListener("DOMContentLoaded", function () {
+    const nav = document.querySelector(".mobile-nav");
+    const links = document.querySelectorAll(".mobile-nav-link");
+    const closeBtn = document.querySelector(".mobile-nav .nav-link[href='#close']");
 
-      // Close when any link is clicked
-      links.forEach(link => {
-        link.addEventListener("click", function () {
-          console.log('test')
-          nav.classList.add("hidden");
-        });
+    // Close when any link is clicked
+    links.forEach(link => {
+      link.addEventListener("click", function () {
+        console.log("test");
+        nav.classList.add("hidden");
       });
+    });
 
-      Optional: open button logic(if you have a hamburger)
+    // Optional: open button logic (if you have a hamburger)
     const openBtn = document.querySelector(".menu-toggle");
     if (openBtn) {
       openBtn.addEventListener("click", function () {
         nav.classList.remove("hidden");
       });
     }
-    });
-  </script>
+  });
+</script>
+
 
   <div class="section hero">
     <div class="featured-release-hero">
@@ -324,28 +365,32 @@
   </script>
 
 
-  <div id="talents" class="section talents">
-    <h2 class="section-title">Meet Our Talents</h2>
-    <div class="inner-container">
-      <div class="talent-grid">
+  <section class="talent-section">
+  <h2 class="section-title">MEET OUR TALENTS</h2>
 
-        <!-- Talent 1 -->
+  <div class="swiper talent-carousel">
+    <div class="swiper-wrapper">
+
+      <!-- Talent 1 -->
+      <div class="swiper-slide">
         <div class="talent-card">
           <div class="talent-image">
-            <img src="./DMC-Records-Assets/Talent-1.jpg" alt="TG IBRO">
+            <img src="./DMC-Records-Assets/Talent-1.jpg" alt="TG IBRO" />
           </div>
           <div class="talent-info">
             <h3 class="talent-title">TG IBRO</h3>
             <p class="talent-role">Rapper, Singer and Songwriter</p>
             <div class="divider"></div>
-            <a href="https://www.instagram.com/tgibrohim" class="talent-link">Know More</a>
+            <a href="#" class="talent-link">Know More</a>
           </div>
         </div>
+      </div>
 
-        <!-- Talent 2 -->
+      <!-- Talent 2 -->
+      <div class="swiper-slide">
         <div class="talent-card">
           <div class="talent-image">
-            <img src="./DMC-Records-Assets/Talent-2.jpg" alt="BellaNica">
+            <img src="./DMC-Records-Assets/Talent-2.jpg" alt="BellaNica" />
           </div>
           <div class="talent-info">
             <h3 class="talent-title">BellaNica</h3>
@@ -354,23 +399,50 @@
             <a href="#" class="talent-link">Know More</a>
           </div>
         </div>
+      </div>
 
-        <!-- Talent 3 -->
+      <!-- Talent 3 -->
+      <div class="swiper-slide">
         <div class="talent-card">
           <div class="talent-image">
-            <img src="./DMC-Records-Assets/Talent-3.jpg" alt="Unknown">
+            <img src="./DMC-Records-Assets/Talent-3.jpg" alt="Ponzi Potenzio" />
           </div>
           <div class="talent-info">
-            <h3 class="talent-title">Unknown</h3>
-            <p class="talent-role">Coming Soon</p>
+            <h3 class="talent-title">Ponzi Potenzio</h3>
+            <p class="talent-role">Band</p>
             <div class="divider"></div>
             <a href="#" class="talent-link">Know More</a>
           </div>
         </div>
-
       </div>
+
+      <!-- Talent 3 -->
+      <div class="swiper-slide">
+        <div class="talent-card">
+          <div class="talent-image">
+            <img src="./DMC-Records-Assets/Talent-3.jpg" alt="Ponzi Potenzio" />
+          </div>
+          <div class="talent-info">
+            <h3 class="talent-title">Ponzi Potenzio</h3>
+            <p class="talent-role">Band</p>
+            <div class="divider"></div>
+            <a href="#" class="talent-link">Know More</a>
+          </div>
+        </div>
+      </div>
+
     </div>
+
+    <!-- Navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
   </div>
+</section>
+
+
   </div>
   <!-- <h2 class="background-heading">TALENTS</h2> -->
   </div>
